@@ -1,0 +1,485 @@
+@import 'includes/brand.less';
+@import 'includes/typography.less';
+@import 'includes/mixins.less';
+/*<a href="http://thenounproject.com/noun/restaurant/#icon-No6564" target="_blank">Restaurant</a> designed by <a href="http://thenounproject.com/robertopib" target="_blank">Roberto Pinto</a> from The Noun Project*/
+* {
+  .box-sizing;
+}
+
+body {
+  background-color: @dark;
+  font-family: @bodyfont;
+  font-size: 1em;
+
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/*nav#topnav{
+ 
+  ul{
+    li{
+      display: inline-block;
+      text-transform: uppercase;
+       list-style: none;
+      a{
+        color:red;
+
+      }
+    }
+  }
+}*/
+.menubutton{
+  display: none;
+}
+nav#nav {
+  position: fixed;
+  margin-top: -8px;
+  background-color: black;
+  padding: 15px 0px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: @headingsfont;
+  ul {
+    margin: 0 auto;
+    width: 100%;
+    li {
+      display: inline-block;
+      padding: 0px 10%;
+      a{
+        color:white;
+        text-decoration: none;
+      }
+      a:hover{
+         color: @dark;
+
+      };
+    }
+  }
+}
+header#intro {
+  background-image: url('../images/murgh_mumtaz.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+    .block {
+      font-family: @headingsfont;
+      background-color: black;
+      width: 60%;
+      height: 187px;
+      opacity: 0.5;
+      margin:200px;
+      text-align: center;
+    }
+  .headline{
+    width: 100%;
+    color: white;
+    padding: 30px 1px 0px 0px;
+    h1{
+      font-size: 2.3em;
+    }
+    p{
+      font-size: 0.7em;
+      text-decoration: underline;
+    }
+
+  }
+  
+}
+
+/*about*/
+section#about{
+  font-family: @bodyfont;
+  background-color: white;
+  width: 100%;
+  letter-spacing: 1.5px;
+   h1{
+    padding-top: 30px;
+   }
+  .spoon{
+        background-image: url('../images/plate_1.svg');
+        background-repeat: no-repeat;
+       width: 250px;
+      height: 250px;
+        float: right;
+        margin-top: -1%;
+      }
+ .content{
+    width: 60%;
+    margin: 0;
+    padding: 0;
+
+    p{
+        color: black;
+        font-weight: bold;
+      }
+      
+   }
+   
+}
+
+
+/*menu*/
+section#Menu {
+  background-color: #34495e;
+  color: white;
+  letter-spacing: 1.5px;
+
+  h1{
+    margin-top: 60px;
+    font-size: 2.5em;
+  }
+  h2{
+    color: black;
+    font-size: 1.2em;
+  }
+  h3{
+    font-size: 1em;
+  }
+  p{
+
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .price{
+    float: right;
+    margin-top: -80px;
+  }
+}
+
+/*
+contact form*/
+section#contact {
+  background: white;
+  h1{
+  font-size: 1.2em;
+  }
+  form {
+    width: 100%;
+    height: 200px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-family: @headingsfont;
+    label {
+      .input {
+        display: inline-block;
+        padding: 7px;
+        width:25%;
+        background: black;
+        color: white;
+      }
+      input {
+        margin-left: -5px;
+        padding: 7px;
+        width: 70%;
+        border: 1px solid #fff;
+        background: @dark;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: @headingsfont;
+         }
+    }
+    input[type="submit"] {
+          padding: 5px;
+      border: 0 none;
+      background: black;
+      color: white;
+      font-size: 1.2em;
+      font-family: @headingsfont;
+      cursor: pointer;
+      float: right;
+      margin-right: 50px;
+    }
+  }
+}
+footer#footer {
+  border-top:2px solid black;
+  background: white;
+  color: black;
+  h4{
+  text-align: center;
+}
+}
+/*Tablet Media Query*/
+@media only screen and (max-width: 1024px) {
+
+  .container {
+    padding: 50px 0px;
+    width: 95%;
+  }
+  .menubutton{
+    display: none;
+  }
+  nav#nav {
+      background-color: black;
+      padding: 0px;
+      width: 100%;
+      height: 45px;
+  ul {
+      margin: 0 auto; 
+      width: 100%;
+      margin-top: -40px;
+    li {
+      display: inline-block;
+      padding: 0px 5%;
+      };
+    }
+  }
+    header#intro {
+    .block {
+      height: 187px;
+      opacity: 0.5;
+      text-align: center;
+    }
+      .headline{
+        width: 100%;
+        color: white;
+        padding: 30px 1px 0px 0px;
+        h1{
+          font-size: 1em;
+        }
+        p{
+          font-size: 0.7em;
+          text-decoration: underline;
+        }
+
+      }
+  
+    }
+
+  /*about*/
+    section#about{
+      width: 100%;
+      letter-spacing: 1px;
+       h1{
+        padding-top: 10px;
+       }
+      .spoon{
+        width: 250px;
+        height: 250px;
+        float: right;
+        margin-top: 17%;
+        margin-right: -76px
+      }
+     .content{
+        width: 70%;
+        margin: 0;
+        padding: 0;
+        float: left;
+
+        p{  
+
+            color: black;
+            font-weight: bold;
+          }
+          
+       }
+       
+    }
+
+  /*menu*/
+  section#Menu {
+      h1{
+        margin-top: 30px;
+        font-size: 2em;
+      }
+      .price{
+        float: right;
+        margin-top: -90px;
+      }
+    }
+
+
+
+  /*
+  contact form*/
+  section#contact {
+    
+    form {
+      label {
+        .input {
+          display: inline-block;
+          
+          width:25%;
+          background: black;
+          color: white;
+        }
+        input {
+          width: 100%;
+          border: 1px solid #fff;
+          background: @dark;
+          color: #fff;
+          text-transform: uppercase;
+          font-family: @headingsfont;
+           }
+      }
+      input[type="submit"] {
+         width: 100%;
+         margin: 5px;
+        }
+     }
+    }
+    footer#footer {
+
+      height: 50px;
+      h4{
+        margin-top: -35px;
+    }
+    }
+         
+}
+/*// Phone Media Query*/
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+
+
+    /*headerbanner*/
+  .menubutton{
+      .boxmodel(100%);
+      height: 32px;
+      display: inline;
+      position:relative;
+      border: 2px solid black;
+      background-color: black;
+    }  
+  nav#nav{
+    width: 100%;
+    height: 170px;
+    position: relative;
+    .boxmodel(100%);
+    ul {
+        margin-left: -27px;
+
+
+      li{
+      display: inline-block;
+      border: 2px solid white;
+      width: 100%;
+      padding: 5px;
+      margin: 5px;
+      
+    }
+  }
+  }
+   header#intro {
+  
+    .block {
+      background-color: black;
+      width: 100%;
+      min-height: 250px;
+      margin:0 auto;
+      padding: 0px;
+      height: 187px;
+      opacity: 0.5;
+      text-align: center; 
+    }
+  .headline{
+    h1{
+      font-size: 1.5em;
+    }
+    p{
+      font-size: 0.7em;
+      text-decoration: underline;
+     }
+
+    }
+    
+  }
+  /*about*/
+  section#about{
+     h1{
+      margin-top: -57px;
+      text-align: center;
+     }
+     .spoon{
+          width: 250px;
+          height: 250px;
+          float: right;
+          margin-top: 1%;
+          margin-right: 56px;
+        }
+   .content{
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      margin-top: -101px;
+
+      p{
+          color: black;
+          font-weight: bold;
+        }
+        
+     }
+     
+  }
+  /*//menu*/
+    section#Menu {
+    h1{
+      margin-top: -33px;
+      font-size: 1.8em;
+      text-align: center;
+    }
+    h2{
+      color: black;
+      font-size: 1em;
+    }
+    h3{
+      
+    }
+    .desc{
+      display: none;
+      
+    }
+    .price{
+      margin: -2px 5px 0px 0px;
+    }
+  }
+  /*
+contact form*/
+section#contact {
+  h1{
+      margin-top: -33px;
+      font-size: 1.8em;
+      text-align: center;
+  }
+  form {
+    width: 100%;
+    height: 200px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-family: @headingsfont;
+    label {
+      .input {
+        width:100%;
+        background: black;
+        color: white;
+
+      }
+      input {
+        width: 102%;
+        border: 1px solid #fff;
+        background: @dark;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: @headingsfont;
+         }
+    }
+    input[type="submit"] {
+      width: 100%;
+      margin-right: 0px;
+
+    }
+  }
+}
+  footer#footer {
+      h4{
+        font-size: 0.8em;
+        text-align: center;
+        margin-top: 16px;
+    }
+  }
+}
